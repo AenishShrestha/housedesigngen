@@ -1,0 +1,557 @@
+<!DOCTYPE html><html lang="en">
+<!--
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+<!--   <link href="{{url_for('static', filename='newstyle.css')}}" rel="stylesheet" type="text/css"/> -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRF1Q15JC8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-PRF1Q15JC8');
+  </script>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.jpg') }}">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    
+		<title>House Design In Nepal Dropbox</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Enhance the beauty and functionality of your living space with our professional interior design services in Nepal. Let AS Design Studio turn your vision into reality. Contact us now." />
+		<meta name="keywords" content="interior design in nepal" />
+<!-- End of headEnd -->
+  <style>
+    .card {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      max-width: 768px;
+      margin: auto;
+      text-align: center;
+      font-family: 'Arimo', sans-serif;
+      }
+    
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+    
+    button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #FFFFFF;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+     buttons {
+        border: none;
+        outline: 2px solid black;
+        display: inline-block;
+        padding: 10px;
+        color: black;
+        background-color: #fff;
+        text-align: center;
+        cursor: pointer;
+        width:80%;
+        font-size: 18px;
+        border-radius: 10px;
+       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+    buttons_for_interior {
+        border: none;
+        margin: 10px;
+        outline: 2px solid #E8E8E8;
+        display: inline-block;
+        padding: 14px;
+        color: black;
+        background-color: #fff ;
+        text-align: center;
+        cursor: pointer;
+        width: 80%;
+        font-size: 12px;
+        border-radius: 10px;
+/*       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
+      }
+    
+    
+    button:hover, a:hover {
+      opacity: 0.7;
+    }
+    buttons:hover, a:hover {
+      opacity: 0.7;
+/*       color: #A0DED2; /* change the text color */
+/*       background-color: #A0DED2; /* change the box color */
+    }
+     buttons_for_interior:hover, a:hover {
+      opacity: 0.7;
+    }
+
+    
+    .card img {
+      height: 100%;`
+      width: 100%;
+    }
+    #preloader{
+    background: #FFFFFF url("{{ url_for('static',filename='1488.gif') }}")  no-repeat center center;
+    background-size: 3%;
+    height: 100vh;
+    width:100vw;
+    position: fixed;
+    z-index:100;
+  }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  /* background: #f2f3fb; */
+  background: #fff;
+}
+::selection{
+  color: #fff;
+  background: #7d2ae8;
+}
+.view-modal, .popup{
+  position: absolute;
+  left: 10%
+  
+
+}
+button{
+    display: inline-block;
+}
+.view-modal{
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top:-10px;
+  transform: translate(-50%, -50%);
+}
+.popup{
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  top: -150%;
+  left:50%;
+  max-width: 380px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  transform: translate(-50%, -50%) scale(1.2);
+  transition: top 0s 0.2s ease-in-out,
+              opacity 0.2s 0s ease-in-out,
+              transform 0.2s 0s ease-in-out;
+}
+.popup.show{
+  top: 50%;
+  opacity: 1;
+  pointer-events: auto;
+  transform:translate(-50%, -50%) scale(1);
+  transition: top 0s 0s ease-in-out,
+              opacity 0.2s 0s ease-in-out,
+              transform 0.2s 0s ease-in-out;
+
+}
+.popup :is(header, .icons, .field){
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup header{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ebedf9;
+}
+header span{
+  font-size: 21px;
+  font-weight: 600;
+}
+header .close, .icons a{
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+header .close{
+  color: #878787;
+  font-size: 17px;
+  background: #f2f3fb;
+  height: 33px;
+  width: 33px;
+  cursor: pointer;
+}
+header .close:hover{
+  background: #ebedf9;
+}
+.popup .content{
+  margin: 20px 0;
+}
+.popup .icons{
+  margin: 15px 0 20px 0;
+}
+.content p{
+  font-size: 16px;
+}
+.content .icons a{
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+.icons a i{
+  transition: transform 0.3s ease-in-out;
+}
+.icons a:nth-child(1){
+  color: #1877F2;
+  border-color: #b7d4fb;
+}
+.icons a:nth-child(1):hover{
+  background: #1877F2;
+}
+.icons a:nth-child(2){
+  color: #46C1F6;
+  border-color: #b6e7fc;
+}
+.icons a:nth-child(2):hover{
+  background: #46C1F6;
+}
+.icons a:nth-child(3){
+  color: #e1306c;
+  border-color: #f5bccf;
+}
+.icons a:nth-child(3):hover{
+  background: #e1306c;
+}
+.icons a:nth-child(4){
+  color: #25D366;
+  border-color: #bef4d2;
+}
+.icons a:nth-child(4):hover{
+  background: #25D366;
+}
+.icons a:nth-child(5){
+  color: #0088cc;
+  border-color: #b3e6ff;
+}
+.icons a:nth-child(5):hover{
+  background: #0088cc;
+}
+.icons a:hover{
+  color: #fff;
+  border-color: transparent;
+}
+.icons a:hover i{
+  transform: scale(1.2);
+}
+.content .field{
+  margin: 12px 0 -5px 0;
+  height: 45px;
+  border-radius: 4px;
+  padding: 0 5px;
+  border: 1px solid #e1e1e1;
+}
+.field.active{
+  border-color: #7d2ae8;
+}
+.field i{
+  width: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+.field.active i{
+  color: #7d2ae8;
+}
+.field input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.field button{
+  color: #fff;
+  padding: 5px 18px;
+  background: #7d2ae8;
+}
+.field button:hover{
+  background: #8d39fa;
+}
+    button {
+  width: auto;
+  text-align: left;
+}
+
+ .social-icon {
+      padding: 0 10px;
+   }
+ .left-block {
+      margin-left: 0px;
+   }
+    .right-block {
+      margin-right: 0px;
+   }
+/*    h1{
+    text-shadow: 0.1px 0.1px 0.5px black;
+   }  */
+
+    /* Default styles */
+.element {
+  width: 500px;
+  height: 300px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .element {
+    width: 90%;
+    height: 200px;
+  }
+}
+  @media (max-width: 767px) {
+  /* Add styles specific to mobile devices here */
+}
+
+
+
+  </style>
+</head>
+  
+
+    
+<body>
+  <div id="preloader"></div>
+
+      <!-- End of bodyStart -->
+
+  <div class="card">
+    <!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header style="display:flex; justify-content:space-between; align-items:center; padding: 10px 20px;">
+              <div class="header-left" style="text-align:left;">
+                <h1>🏠 AS Design Studio</h1>
+              </div>
+            
+              <div class="header-right" style="display:flex; gap: 10px;">
+                <a href="https://twitter.com/aenish_shrestha" target="_blank" class="social-icon">
+                  <img src="https://img.freepik.com/premium-vector/new-twitter-x-logo-vector-twitter-x-sign-vector_952796-6.jpg" alt="Twitter" style="height: 30px !important; width: 30px !important;" >
+                </a>
+                <a href="https://www.instagram.com/asdesignsstudios" target="_blank" class="social-icon">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram" style="height: 30px !important; width: 30px !important;" >
+                </a>
+                <a href="https://www.interiordesignernp.com/" target="_blank" class="social-icon">
+                  <img src="https://i.pinimg.com/originals/11/f2/fd/11f2fd963a2028fa67ce38ffe0e92bc5.png" alt="Website" style="height: 30px !important; width: 30px !important;" >
+                </a>
+              </div>
+            </header>
+            
+               
+
+
+
+            </header>
+             <br>
+  <img src="{{ random_image }}"alt="Avatar" style="width:100%; height:100%;">
+            <br>
+            <br>
+            <header style="display:flex; justify-content:space-between;">
+              
+   <div style="text-align:left;">
+<button class="view-modal"> 
+       <lord-icon src="https://cdn.lordicon.com/udwhdpod.json" trigger="hover" style="width:50px;height:70px">
+      </lord-icon> 
+</button> 
+   </div>
+              
+  <div class="popup">
+    <header>
+      <span>Share Model</span>
+      <div class="close"><i class="uil uil-times"></i></div>
+    </header>
+    <div class="content">
+      <p>Share this link via</p>
+      <ul class="icons">
+        <a href="http://www.facebook.com/share.php?u={{ random_image }}"><i class="fab fa-facebook-f"></i></a>
+        <a href="http://twitter.com/share?text=Check Out My House Design From As Design Studio&url={{ random_image }} &hashtags=asdesignstudio,asdesign,housedesigninnepal"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="whatsapp://send?text=Check%20Out%20My%20House%20Design%20From%20As%20Design%20Studio -> {{ random_image }}"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:?subject=Check Out My House Design&body={{random_image}}"><i class="fab fa-telegram-plane"></i></a>
+      </ul>
+      <p>Or copy link</p>
+      <div class="field">
+        <i class="url-icon uil uil-link"></i>
+        <input type="text" readonly value="{{random_image}}">
+        <button>Copy</button>
+      </div>
+    </div>
+  </div>
+
+              				
+<!--             <form method="GET" action="https://www.google.com"> -->
+              <!-- <form method="GET" action="/">
+      <buttons type="submit"style="height:60px"> Next One ⚡!
+        <lord-icon
+    src="https://cdn.lordicon.com/zmkotitn.json"
+    trigger="hover"
+    style="width:30px;height:30px">
+</lord-icon>
+       </buttons> -->
+<!--     </form> -->
+
+<!-- "Next One" button to load a new image -->
+    <!-- <form method="GET" action="/"> -->
+      <a href="/">
+        <buttons type="submit" style="height:60px"> Next One ⚡!
+            <lord-icon
+                src="https://cdn.lordicon.com/zmkotitn.json"
+                trigger="hover"
+                style="width:30px;height:30px">
+            </lord-icon>
+        </buttons>
+    <!-- </form> -->
+
+              
+<!-- <a href="https://housedesigninnepal.com/generate" target="_blank" class="left-block">
+      <buttons_for_interior style="width:265px;height:50px">↗️ View House Design Ideas </buttons_for_interior>
+               </a> -->
+         
+              
+<a href="{{ random_image }}"target="_blank" class="icon-link"> 
+<lord-icon
+    src="https://cdn.lordicon.com/gigfpovs.json"
+    trigger="hover"
+    style="width:50px;height:60px">
+    
+</lord-icon>
+  </a> 
+            </header>
+   <div style="text-align:left;">
+<p>🏠<b>asdesignsstudios: </b>  This House Doesn't Exist Yet 📞 <a style="color: grey;"href="tel:+977-986-011-5463">Call Us At</a>
+ 📱 For More Design Ideas. </p></div>
+             <br>
+            <br>
+            <br>
+<!--     <h2>This Room Doesn't Exist Yet</h2> -->
+<!--               <br>
+            <br> -->
+  <header style="display:flex; justify-content:space-between;">
+
+            <a href="https://housedesigninnepal.com/" class="left-block">
+      <buttons_for_interior style="width:120px;height:50px"><b>← Back To Home</b></buttons_for_interior></a>
+	<a href="https://housedesigninnepal.com/interior-projects/" target="_blank" class="right-block">
+      <buttons_for_interior style="width:120px;height:50px"><b>View Interior Design Ideas →</b></buttons_for_interior>
+               </a>
+  </header>
+
+               </a>
+          </section>
+      </div>
+  <br>
+<!--   <a href="https://housedesigninnepal.com/" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/004/220/756/original/home-silhouette-button-free-vector.jpg" alt="Back To Homepage" style="height: 70px !important;width: 70px !important;" ></a> -->
+
+    
+  
+  </div>
+
+  
+
+  
+    <!-- End of bodyEnd -->
+
+          <script>
+const preloader = document.getElementById("preloader");
+
+for (let button of buttons) {
+    button.addEventListener("click", function() {
+        preloader.style.display = "block";
+        // Add your page load code here
+        window.addEventListener("load", function(){
+            preloader.style.display = "none";
+        });
+    });
+}
+
+
+  </script>
+  <script>
+    const viewBtn = document.querySelector(".view-modal"),
+    popup = document.querySelector(".popup"),
+    close = popup.querySelector(".close"),
+    field = popup.querySelector(".field"),
+    input = field.querySelector("input"),
+    copy = field.querySelector("button");
+
+    viewBtn.onclick = ()=>{
+      popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+      viewBtn.click();
+    }
+
+    copy.onclick = ()=>{
+      input.select(); //select input value
+      if(document.execCommand("copy")){ //if the selected text copy
+        field.classList.add("active");
+        copy.innerText = "Copied";
+        setTimeout(()=>{
+          window.getSelection().removeAllRanges(); //remove selection from document
+          field.classList.remove("active");
+          copy.innerText = "Copy";
+        }, 3000);
+      }
+    }
+  </script>
+  
+   <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+  
+<script>
+    var loader = document.getElementById("preloader");
+window.addEventListener("load",function(){
+    loader.style.display = "none";
+});
+
+    
+  </script> 
+  <script>
+      document.getElementById("share-button").addEventListener("click", function() {
+        var shareOptions = document.getElementById("share-options");
+        if (shareOptions.style.display === "none") {
+          shareOptions.style.display = "block";
+        } else {
+          shareOptions.style.display = "none";
+        }
+      });
+    </script>
+  <script>
+    document.querySelector('.view-modal').addEventListener('click', function() {
+document.querySelector('.icon-link').style.display = (document.querySelector('.icon-link').style.display === 'none') ? 'block' : 'none';
+});
+  </script>
+  
+      <!-- End of bodyEnd -->
+
+</body></html>
